@@ -1,6 +1,5 @@
-import requests, os, asyncio, aiofiles, time
+import requests, os, asyncio, aiofiles, time, imageio
 from aiohttp import ClientConnectionError, ClientSession
-import imageio
 start = time.time()
 
 if os.path.exists('rilla_assets.txt'):
