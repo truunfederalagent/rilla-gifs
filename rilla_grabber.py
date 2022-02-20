@@ -1,5 +1,6 @@
 import requests, os, asyncio, aiofiles, time, imageio
 from aiohttp import ClientConnectionError, ClientSession
+
 start = time.time()
 
 if os.path.exists('rilla_assets.txt'):
@@ -49,7 +50,6 @@ async def fetch_all_rillas(wallet, rillas):
         os.mkdir(wallet)
     async with ClientSession() as session:
         tasks = []
-
         for rilla in rillas:
             tasks.append(
                 fetch_rilla(wallet, rilla, session)
